@@ -6,5 +6,4 @@
 For start frontend 
 
 < python backend.py >
-
 For start backend
