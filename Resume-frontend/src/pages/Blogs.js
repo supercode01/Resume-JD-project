@@ -4,7 +4,10 @@ import blogPosts from "../blogs/blogData";
 
 export default function Blogs() {
   return (
-    <div className="mt-20 min-h-screen bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100 p-6">
+    <div className="pt-32 min-h-screen p-6 
+             bg-gray-100 dark:bg-gray-800 dark:text-white
+             bg-gradient-to-r from-green-100 via-purple-100 to-blue-100 
+             dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
       <header className="max-w-6xl mx-auto mb-8">
         <h1 className="text-3xl font-bold text-center">Blog Articles</h1>
         <p className="text-center text-gray-600 dark:text-gray-300 mt-2">
