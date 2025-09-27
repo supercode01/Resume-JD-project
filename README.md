@@ -5,5 +5,8 @@
 < npm start > 
 For start frontend 
 
+
+< myVenv\Scripts\activate >
+First run this command in main folder than go to "myVenv and state backend using following command
 < python backend.py >
 For start backend
