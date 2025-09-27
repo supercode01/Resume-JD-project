@@ -7,6 +7,7 @@ import Blogs from './pages/Blogs';
 import CoverLetter from './pages/CoverLetter';
 import BlogDetails from './pages/BlogDetails';
 import NoPage from './pages/NoPage';
+import Result from './pages/Result';
 
 export default function App() {
   return (
@@ -17,7 +18,8 @@ export default function App() {
           <Route path="blogs" element={<Blogs />} />
           <Route path="about" element={<About />} />
           <Route path="/coverletter" element={<CoverLetter/>} />    
-          <Route path="/blogs/:id" element={<BlogDetails />} />      
+          <Route path="/blogs/:id" element={<BlogDetails />} />   
+          <Route path="result" element={<Result />} />    
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>

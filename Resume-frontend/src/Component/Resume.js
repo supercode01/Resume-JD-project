@@ -1,9 +1,11 @@
+// src/components/Resume.js
 import React, { useState } from 'react';
 import UploadModal from './UploadModal';
+import { useNavigate } from 'react-router-dom';
 
 function Resume() {
   const [showModal, setShowModal] = useState(false);
-  const [analysisResult, setAnalysisResult] = useState('');
+  const navigate = useNavigate();
 
   return (
     <div className='grid grid-cols-1 md:grid-cols-2 gap-4 p-4 bg-gray-100 dark:bg-gray-800 dark:text-white relative bg-gradient-to-r from-green-100 via-purple-100 to-blue-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 text-justify min-h-screen'>
@@ -27,15 +29,6 @@ function Resume() {
             Get Started
           </button>
         </div>
-
-        {analysisResult && (
-          <div className="mt-6 p-4 bg-white dark:bg-gray-700 rounded-lg shadow-lg">
-            <h3 className="text-lg font-bold text-gray-800 dark:text-white mb-2">AI Analysis Result:</h3>
-            <pre className="whitespace-pre-wrap text-sm text-gray-700 dark:text-gray-200">
-              {analysisResult}
-            </pre>
-          </div>
-        )}
       </div>
 
       {/* Right image */}
@@ -47,7 +40,12 @@ function Resume() {
       {showModal && (
         <UploadModal 
           onClose={() => setShowModal(false)}
-          onResult={(result) => setAnalysisResult(result)}
+          onResult={(result) => {
+            // Save to sessionStorage (so refresh keeps it) and navigate to result page with state
+            try { sessionStorage.setItem('analysis', result); } catch(e) { /* ignore */ }
+            setShowModal(false);
+            navigate('/result', { state: { analysis: result } });
+          }}
         />
       )}
     </div>
