@@ -8,5 +8,9 @@ For start frontend
 
 < myVenv\Scripts\activate >
 First run this command in main folder than go to "myVenv and state backend using following command
+
+Make a .env file in backend folder (myVenv) and paste Gemini api key "GEMINI_API_KEY=XYZ....." 
+
+
 < python backend.py >
 For start backend
