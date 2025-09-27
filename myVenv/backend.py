@@ -54,7 +54,7 @@ def analyze_resume():
     response = requests.post(GEMINI_URL, headers=headers, json=payload)
 
     if response.status_code != 200:
-        return jsonify({"error": "Gemini API request failed", "details": response.text}), 500
+        return jsonify({"error": "Gemini API request failed please try again! ", "details": response.text}), 500
 
     result = response.json()
     output_text = result["candidates"][0]["content"]["parts"][0]["text"]
