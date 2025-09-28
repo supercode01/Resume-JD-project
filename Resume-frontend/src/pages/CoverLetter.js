@@ -1,8 +1,51 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function CoverLetter() {
   const [open, setOpen] = useState(false);
   const [desc, setDesc] = useState("");
+  const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
+
+  const handleGenerate = async () => {
+    if (!desc.trim()) {
+      alert("Please enter a Job Description!");
+      return;
+    }
+
+    setLoading(true);
+    try {
+      const formData = new FormData();
+      formData.append("job_desc", desc);
+
+      const res = await fetch("http://localhost:5000/cover-letter", {
+        method: "POST",
+        body: formData,
+      });
+
+      const data = await res.json();
+
+      if (res.ok) {
+        // Save to sessionStorage so refresh keeps result
+        try {
+          sessionStorage.setItem("cover_letter", data.cover_letter);
+        } catch (e) {
+          console.error("SessionStorage error:", e);
+        }
+
+        // Navigate to result page with state
+        navigate("/result_coverLetter", { state: { cover_letter: data.cover_letter } });
+      } else {
+        alert(data.error || "Something went wrong. Please try again.");
+      }
+    } catch (err) {
+      console.error(err);
+      alert("Server error. Please check your backend.");
+    } finally {
+      setLoading(false);
+      setOpen(false);
+    }
+  };
 
   return (
     <section>
@@ -97,13 +140,11 @@ export default function CoverLetter() {
               <button
                 className="rounded-full px-5 py-2 
                            bg-teal-600 text-white font-semibold 
-                           hover:bg-teal-700"
-                onClick={() => {
-                  console.log(desc); // yahan baad me AI call aayegi
-                  setOpen(false);
-                }}
+                           hover:bg-teal-700 disabled:opacity-50"
+                onClick={handleGenerate}
+                disabled={loading}
               >
-                Continue
+                {loading ? "Generating..." : "Continue"}
               </button>
             </div>
           </div>

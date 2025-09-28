@@ -8,6 +8,7 @@ import CoverLetter from './pages/CoverLetter';
 import BlogDetails from './pages/BlogDetails';
 import NoPage from './pages/NoPage';
 import Result from './pages/Result';
+import CoverletterRsult from './pages/result_coverLetter';
 
 export default function App() {
   return (
@@ -21,6 +22,7 @@ export default function App() {
           <Route path="/blogs/:id" element={<BlogDetails />} />   
           <Route path="result" element={<Result />} />    
           <Route path="*" element={<NoPage />} />
+          <Route path="result_coverLetter" element={<CoverletterRsult />} />
         </Route>
       </Routes>
     </BrowserRouter>
