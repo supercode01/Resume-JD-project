@@ -1,19 +1,52 @@
-import React from "react";
+import React, { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import { Copy, Check } from "lucide-react";
 
 export default function ResultCoverLetter() {
   const location = useLocation();
   const navigate = useNavigate();
+  const [copied, setCopied] = useState(false);
   const coverLetter =
     location.state?.cover_letter || sessionStorage.getItem("cover_letter");
+
+  const copyToClipboard = async () => {
+    try {
+      await navigator.clipboard.writeText(coverLetter);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch (err) {
+      console.error('Failed to copy text: ', err);
+    }
+  };
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 mt-16 py-10 px-4 sm:px-6 lg:px-8">
       <div className="max-w-3xl mx-auto bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
         <div className="px-6 py-8 sm:px-10">
-          <h1 className="text-2xl sm:text-3xl font-semibold text-gray-900 dark:text-gray-100 mb-4">
-            Generated Cover Letter
-          </h1>
+          <div className="flex justify-between items-center mb-4">
+            <h1 className="text-2xl sm:text-3xl font-semibold text-gray-900 dark:text-gray-100">
+              Generated Cover Letter
+            </h1>
+            {coverLetter && (
+              <button
+                onClick={copyToClipboard}
+                className="flex items-center gap-2 px-3 py-2 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 rounded-lg transition-colors duration-200"
+                title="Copy to clipboard"
+              >
+                {copied ? (
+                  <>
+                    <Check size={16} className="text-green-600" />
+                    <span className="text-sm text-green-600">Copied!</span>
+                  </>
+                ) : (
+                  <>
+                    <Copy size={16} className="text-gray-600 dark:text-gray-300" />
+                    <span className="text-sm text-gray-600 dark:text-gray-300">Copy</span>
+                  </>
+                )}
+              </button>
+            )}
+          </div>
           {coverLetter ? (
             <pre
               className="whitespace-pre-wrap bg-gray-100 dark:bg-gray-700 
