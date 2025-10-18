@@ -65,10 +65,10 @@ function Home() {
             </div>
 
             {/* Right Image */}
-            <div className="relative mt-4">
+            <div className="relative mt-6">
               <div className="relative z-10">
                 <img 
-                  src="/images/background.png" 
+                  src="/images/background.jpg" 
                   alt="Resume Analysis Dashboard" 
                   className="w-full h-auto rounded-2xl shadow-2xl"
                 />
