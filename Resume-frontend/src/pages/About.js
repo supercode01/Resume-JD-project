@@ -6,7 +6,7 @@ function About() {
 
             {/* Left image */}
             <div className='mt-10 p-16 '>
-                <img src='images/background.png' alt='background img' className='rounded-lg shadow-lg bg-white dark:bg-gray-700' />
+                <img src='images/background1.png' alt='background img' className='rounded-lg shadow-lg bg-white dark:bg-gray-700' />
             </div>
 
             {/* Right side Text */}
