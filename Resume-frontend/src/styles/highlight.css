@@ -1,0 +1,83 @@
+/* Syntax highlighting styles for code blocks */
+.hljs {
+  background: #f8f9fa !important;
+  color: #333 !important;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+}
+
+.dark .hljs {
+  background: #1f2937 !important;
+  color: #e5e7eb !important;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #6a737d;
+  font-style: italic;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal,
+.hljs-title {
+  color: #d73a49;
+}
+
+.hljs-string,
+.hljs-doctag {
+  color: #032f62;
+}
+
+.hljs-title,
+.hljs-section,
+.hljs-selector-id {
+  color: #6f42c1;
+  font-weight: bold;
+}
+
+.hljs-attribute,
+.hljs-name,
+.hljs-number,
+.hljs-operator,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag {
+  color: #005cc5;
+}
+
+.hljs-regexp,
+.hljs-link {
+  color: #032f62;
+}
+
+.hljs-symbol,
+.hljs-bullet {
+  color: #e36209;
+}
+
+.hljs-built_in,
+.hljs-builtin-name {
+  color: #005cc5;
+}
+
+.hljs-meta {
+  color: #6a737d;
+}
+
+.hljs-deletion {
+  background: #ffeef0;
+}
+
+.hljs-addition {
+  background: #f0fff4;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}

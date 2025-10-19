@@ -111,66 +111,6 @@ function About() {
                     </div>
                 </div>
             </section>
-
-            {/* Stats Section */}
-            <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center mb-12">
-                        <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-                            Impact
-                        </h2>
-                        <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-                            Numbers that tell the story of our success
-                        </p>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-                        <div>
-                            <div className="text-4xl lg:text-5xl font-bold text-white mb-2">50K+</div>
-                            <div className="text-xl text-blue-100">Resumes Analyzed</div>
-                        </div>
-                        <div>
-                            <div className="text-4xl lg:text-5xl font-bold text-white mb-2">98%</div>
-                            <div className="text-xl text-blue-100">User Satisfaction</div>
-                        </div>
-                        <div>
-                            <div className="text-4xl lg:text-5xl font-bold text-white mb-2">15K+</div>
-                            <div className="text-xl text-blue-100">Jobs Landed</div>
-                        </div>
-                        <div>
-                            <div className="text-4xl lg:text-5xl font-bold text-white mb-2">100+</div>
-                            <div className="text-xl text-blue-100">Countries Served</div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* CTA Section */}
-            <section className="py-20 bg-gray-50 dark:bg-gray-800">
-                <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-                    <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-6">
-                        Ready to Transform Your Career?
-                    </h2>
-                    <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
-                        Join thousands of successful job seekers who have used our platform to advance their careers.
-                    </p>
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Link 
-                            to="/"
-                            className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
-                        >
-                            Start Your Journey
-                        </Link>
-                        <Link 
-                            to="/blogs"
-                            className="inline-flex items-center justify-center px-8 py-4 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 font-semibold rounded-lg hover:border-blue-600 hover:text-blue-600 transition-all duration-300"
-                        >
-                            Read More
-                            <ArrowRight className="w-4 h-4 ml-2" />
-                        </Link>
-                    </div>
-                </div>
-            </section>
         </div>
     )
 }
