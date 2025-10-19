@@ -60,14 +60,14 @@ export default function CoverLetter() {
           {/* LEFT */}
           <div className="mt-20 pl-10 self-start">
             <h1
-              className="pb-5 text-4xl md:text-5xl font-serif font-bold 
-                           text-slate-900 dark:text-slate-100 leading-tight"
+              className="pb-5 text-4xl md:text-5xl font-bold 
+                           text-gray-900 dark:text-white leading-tight"
             >
               Perfect Cover Letter
             </h1>
             <p
-              className="mt-1 text-sm font-medium 
-                          text-gray-600 dark:text-gray-300 tracking-wide"
+              className="mt-1 text-lg font-normal 
+                          text-gray-600 dark:text-gray-300 leading-relaxed"
             >
               A strong cover letter can turn your application into an
               opportunity. With just your job description, our AI creates a
@@ -83,7 +83,7 @@ export default function CoverLetter() {
                          focus:ring-2 focus:ring-offset-2 
                          focus:ring-teal-600 dark:focus:ring-offset-gray-900"
             >
-              Get Start
+              Get Started
             </button>
           </div>
 
@@ -111,7 +111,7 @@ export default function CoverLetter() {
                           rounded-2xl bg-white dark:bg-gray-800 
                           p-6 shadow-2xl"
           >
-            <h2 className="text-xl font-semibold text-gray-800 dark:text-gray-100">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
               Enter your job description
             </h2>
 

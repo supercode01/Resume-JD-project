@@ -9,7 +9,7 @@ const Layout = () => {
         <div className="container mx-auto flex justify-between items-center">
           <Link to="/" className="flex items-center space-x-2">
             <img 
-              src="/images/logo.jpg"   // yahan apna logo file ka path lagao (public folder me rakho)
+              src="/images/logo.png"   
               alt="MySite Logo"
               className="h-12 w-auto"
             />

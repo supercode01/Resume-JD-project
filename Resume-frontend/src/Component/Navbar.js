@@ -30,7 +30,7 @@ function Navbar() {
                 <nav className='flex justify-between items-center w-full px-6'>
 
                     {/* img */}
-                    <div ><img src="/images/logo.jpg" alt="Logo" className='rounded-full h-11 w-auto' /></div>
+                    <div ><img src="/images/logo.png" alt="Logo" className='rounded-full h-11 w-auto' /></div>
 
                     {/* Navigation Links */}
                     <ul className='flex space-x-6 '>
